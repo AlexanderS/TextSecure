@@ -3,10 +3,17 @@ jdk: oraclejdk7
 env:
   global:
     - TERM=dumb
+    - GIT_AUTHOR_NAME="Alexander Sulfrian"
+    - GIT_AUTHOR_EMAIL="alexander@sulfrian.net"
+    - GIT_COMMITTER_NAME="Alexander Sulfrian"
+    - GIT_COMMITTER_EMAIL="alexander@sulfrian.net"
+    - secure: "E5SiMbh/ebNhXLlyo/bTsjFRhi2uIdpIrekq/PfNv+FW7BgdDn63W+9IgSUPJxN1QRr1bnZnxNg131YlgVgxUNb8VDi9zbJeu4m3VqTW0nBRdp1Zeayj1F1HtrhpWMjCRgFVFWujBRhhf7sfuqkNgNm/ADJ7C+jm3MbwZnd6/RA="
   matrix:
-    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a  RESULT_POSTFIX=-a19
+
 before_install:
   - sudo apt-get update -qq
+  - sudo apt-get install git
 
   # Install base Android SDK:
   - if [ `uname -m` = x86_64 ]; then sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch; fi
@@ -18,3 +25,19 @@ before_install:
   # Install required SDK components:
   - '( while : ; do echo y; sleep 10 ; done ) | android update sdk --all --no-ui --force'
 
+
+after_script:
+  # Publish build results:
+  - git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/AlexanderS/TextSecure.git gh-pages
+  - cp -R build/ "gh-pages/build${TRAVIS_BUILD_NUMBER}${RESULT_POSTFIX}/"
+  - ( echo "<html><body><ul>";
+      cd gh-pages ; ls -1dt */ | head -n50 | while read dir;
+      do
+          echo "<li>";
+          echo "$dir" | sed 's/\/$/ - /';
+          echo "<a href='${dir}lint-results-release-fatal.html'>lint</a>";
+          echo "<a href='${dir}apk/TextSecure-debug-unaligned.apk'>debug</a>";
+          echo "<a href='${dir}apk/TextSecure-release-unsigned.apk'>release</a></li>";
+      done;
+      echo "</ul></body></html>" ) > gh-pages/index.html
+  - cd gh-pages && git add -f . && git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages" && git push origin gh-pages
