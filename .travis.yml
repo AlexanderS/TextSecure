@@ -9,7 +9,7 @@ env:
     - GIT_COMMITTER_EMAIL="alexander@sulfrian.net"
     - secure: "E5SiMbh/ebNhXLlyo/bTsjFRhi2uIdpIrekq/PfNv+FW7BgdDn63W+9IgSUPJxN1QRr1bnZnxNg131YlgVgxUNb8VDi9zbJeu4m3VqTW0nBRdp1Zeayj1F1HtrhpWMjCRgFVFWujBRhhf7sfuqkNgNm/ADJ7C+jm3MbwZnd6/RA="
   matrix:
-    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a  RESULT_POSTFIX=-a19
+    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a  ANDROID_SDK_PARTS=android-19,sysimg-19  RESULT_POSTFIX=-a19
 
 before_install:
   - sudo apt-get update -qq
@@ -23,7 +23,7 @@ before_install:
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
   # Install required SDK components:
-  - '( while : ; do echo y; sleep 10 ; done ) | android update sdk --all --no-ui --force'
+  - '( sleep 10 ; while : ; do echo y; sleep 1 ; done ) | android update sdk --no-ui --force --filter platform-tool,extra-google-m2repository,extra-android-m2repository,build-tools-19.0.2,${ANDROID_SDK_PARTS}'
 
 
 after_script:
