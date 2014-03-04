@@ -10,6 +10,7 @@ env:
     - secure: "E5SiMbh/ebNhXLlyo/bTsjFRhi2uIdpIrekq/PfNv+FW7BgdDn63W+9IgSUPJxN1QRr1bnZnxNg131YlgVgxUNb8VDi9zbJeu4m3VqTW0nBRdp1Zeayj1F1HtrhpWMjCRgFVFWujBRhhf7sfuqkNgNm/ADJ7C+jm3MbwZnd6/RA="
   matrix:
     - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a  ANDROID_SDK_PARTS=android-19,sysimg-19  RESULT_POSTFIX=-a19
+    - ANDROID_TARGET=android-10  ANDROID_ABI=armeabi-v7a  ANDROID_SDK_PARTS=android-10,sysimg-10  RESULT_POSTFIX=-a10
 
 before_install:
   - sudo apt-get update -qq
