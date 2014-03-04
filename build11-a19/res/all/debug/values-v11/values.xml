@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/travis/build/AlexanderS/TextSecure/res/values-v11/resources.xml -->
+    <eat-comment />
+
+    <item name="ic_dialog_alert_dark" type="drawable">@drawable/ic_dialog_alert_holo_dark</item>
+    <item name="ic_dialog_alert_light" type="drawable">@drawable/ic_dialog_alert_holo_light</item>
+    <item name="ic_dialog_info_dark" type="drawable">@drawable/ic_dialog_info_holo_dark</item>
+    <item name="ic_dialog_info_light" type="drawable">@drawable/ic_dialog_info_holo_light</item>
+    <!-- From: file:/home/travis/build/AlexanderS/TextSecure/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/res/values-v11/values.xml -->
+    <eat-comment />
+
+    <style name="Sherlock.__Theme" parent="android:Theme.Holo">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="Sherlock.__Theme.Light" parent="android:Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <!-- From: file:/home/travis/build/AlexanderS/TextSecure/res/values-v11/themes.xml -->
+    <eat-comment />
+
+    <style name="TextSecure.Light.Dialog" parent="@android:style/Theme.Holo.Light.Dialog" />
+    <!-- From: file:/home/travis/build/AlexanderS/TextSecure/res/values-v11/styles.xml -->
+    <eat-comment />
+
+    <style name="Widget.ProgressBar.Horizontal" parent="@android:style/Widget.Holo.ProgressBar.Horizontal"></style>
+
+</resources>

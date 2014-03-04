@@ -1,0 +1,204 @@
+<!-- From: file:/home/travis/build/AlexanderS/TextSecure/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="66" android:versionName="2.0.3" package="org.thoughtcrime.securesms">
+
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19"/>
+
+    <permission android:label="Access to TextSecure Secrets" android:name="org.thoughtcrime.securesms.ACCESS_SECRETS" android:protectionLevel="signature"/>
+
+	<uses-permission android:name="org.thoughtcrime.securesms.ACCESS_SECRETS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+    <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH" xmlns:tools="http://schemas.android.com/tools" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_MMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <permission android:name="org.thoughtcrime.securesms.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="org.thoughtcrime.securesms.permission.C2D_MESSAGE"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:name="org.thoughtcrime.securesms.ApplicationListener" android:theme="@style/TextSecure.LightTheme">
+
+        <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:launchMode="singleTask" android:name="org.thoughtcrime.securesms.RoutingActivity" android:theme="@style/NoAnimation.Theme.BlackScreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <intent-filter>
+                  <action android:name="android.intent.action.SENDTO"/>
+                  <category android:name="android.intent.category.DEFAULT"/>
+                  <data android:scheme="sms"/>
+                  <data android:scheme="smsto"/>
+                  <data android:scheme="mms"/>
+                  <data android:scheme="mmsto"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>            
+
+        </activity>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.RegistrationProblemsActivity" android:theme="@style/TextSecure.Light.Dialog"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.CountrySelectionActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.ImportExportActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="Configure MMS Settings" android:name="org.thoughtcrime.securesms.PromptMmsActivity" android:windowSoftInputMode="stateUnchanged"/>
+
+     <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.MmsPreferencesActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="org.thoughtcrime.securesms.ConversationListActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.ConversationActivity" android:windowSoftInputMode="stateUnchanged"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.GroupCreateActivity" android:windowSoftInputMode="stateVisible"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:launchMode="singleTask" android:name="org.thoughtcrime.securesms.DatabaseMigrationActivity" android:theme="@style/NoAnimation.Theme.Sherlock.Light.DarkActionBar"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:launchMode="singleTask" android:name="org.thoughtcrime.securesms.DatabaseUpgradeActivity" android:theme="@style/NoAnimation.Theme.Sherlock.Light.DarkActionBar"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__create_passphrase" android:launchMode="singleTop" android:name="org.thoughtcrime.securesms.PassphraseCreateActivity" android:theme="@style/NoAnimation.Theme.Sherlock.Light.DarkActionBar" android:windowSoftInputMode="stateUnchanged"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__enter_passphrase" android:launchMode="singleTop" android:name="org.thoughtcrime.securesms.PassphrasePromptActivity" android:theme="@style/NoAnimation.Theme.Sherlock.Light.DarkActionBar" android:windowSoftInputMode="stateUnchanged"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__select_contacts" android:name="org.thoughtcrime.securesms.ContactSelectionActivity" android:windowSoftInputMode="stateHidden"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__select_contact" android:name="org.thoughtcrime.securesms.SingleContactSelectionActivity" android:windowSoftInputMode="stateHidden"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__select_contacts" android:name="org.thoughtcrime.securesms.PushContactSelectionActivity" android:windowSoftInputMode="stateHidden"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__textsecure_detected" android:name="org.thoughtcrime.securesms.AutoInitiateActivity" android:theme="@style/TextSecure.Light.Dialog"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__public_identity_key" android:name="org.thoughtcrime.securesms.ViewIdentityActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.ViewLocalIdentityActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__change_passphrase" android:name="org.thoughtcrime.securesms.PassphraseChangeActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__verify_identity" android:name="org.thoughtcrime.securesms.VerifyIdentityActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__manage_identity_keys" android:name="org.thoughtcrime.securesms.ReviewIdentitiesActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__complete_key_exchange" android:name="org.thoughtcrime.securesms.ReceiveKeyActivity" android:theme="@style/TextSecure.Light.Dialog"/>
+    
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.ApplicationPreferencesActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.RegistrationActivity" android:windowSoftInputMode="stateUnchanged"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="org.thoughtcrime.securesms.RegistrationProgressActivity"/>
+
+    <activity android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/AndroidManifest__log_submit" android:name="org.thoughtcrime.securesms.LogSubmitActivity" android:windowSoftInputMode="stateHidden"/>
+
+    <activity android:allowTaskReparenting="true" android:alwaysRetainTaskState="false" android:clearTaskOnLaunch="true" android:enabled="true" android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:name="org.thoughtcrime.securesms.DummyActivity" android:noHistory="true" android:stateNotNeeded="true" android:theme="@android:style/Theme.NoDisplay"/>
+
+    <service android:enabled="true" android:name="org.thoughtcrime.securesms.service.ApplicationMigrationService"/>
+    <service android:enabled="true" android:name="org.thoughtcrime.securesms.service.KeyCachingService"/>
+    <service android:enabled="true" android:name="org.thoughtcrime.securesms.service.SendReceiveService"/>
+    <service android:enabled="true" android:name="org.thoughtcrime.securesms.service.RegistrationService"/>
+    <service android:enabled="true" android:name="org.thoughtcrime.securesms.service.DirectoryRefreshService"/>
+    <service android:enabled="true" android:name="org.thoughtcrime.securesms.gcm.GcmIntentService"/>
+
+    <service android:exported="true" android:name="org.thoughtcrime.securesms.service.QuickResponseService" android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
+        <intent-filter>
+            <action android:name="android.intent.action.RESPOND_VIA_MESSAGE"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <data android:scheme="sms"/>
+            <data android:scheme="smsto"/>
+            <data android:scheme="mms"/>
+            <data android:scheme="mmsto"/>
+        </intent-filter>
+    </service>
+
+
+<!--	<receiver android:name=".service.BootListener" -->
+<!-- 			  android:enabled="true" -->
+<!-- 			  android:exported="false">-->
+<!--    		<intent-filter>-->
+<!--        		<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--    		</intent-filter>-->
+<!--	</receiver>-->
+
+    <receiver android:name="org.thoughtcrime.securesms.gcm.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+            <category android:name="org.thoughtcrime.securesms"/>
+        </intent-filter>
+    </receiver>
+
+    <receiver android:enabled="true" android:exported="true" android:name="org.thoughtcrime.securesms.service.SmsListener" android:permission="android.permission.BROADCAST_SMS">
+             <intent-filter android:priority="1001">
+                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.provider.Telephony.SMS_DELIVER"/>
+             </intent-filter>
+    </receiver>
+
+    <receiver android:exported="true" android:name="org.thoughtcrime.securesms.service.SmsDeliveryListener">
+        <intent-filter>
+            <action android:name="org.thoughtcrime.securesms.services.MESSAGE_SENT"/>
+        </intent-filter>
+    </receiver>
+
+    <receiver android:enabled="true" android:exported="true" android:name="org.thoughtcrime.securesms.service.MmsListener" android:permission="android.permission.BROADCAST_WAP_PUSH">
+             <intent-filter android:priority="1001">
+                 <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED"/>
+                 <data android:mimeType="application/vnd.wap.mms-message"/>
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER"/>
+                 <data android:mimeType="application/vnd.wap.mms-message"/>
+             </intent-filter>
+    </receiver>
+
+    <receiver android:enabled="true" android:exported="true" android:name="org.thoughtcrime.securesms.notifications.MarkReadReceiver">
+        <intent-filter>
+            <action android:name="org.thoughtcrime.securesms.notifications.CLEAR"/>
+        </intent-filter>
+    </receiver>
+
+    <provider android:authorities="org.thoughtcrime.provider.securesms" android:grantUriPermissions="true" android:name="org.thoughtcrime.securesms.providers.PartProvider"/>
+
+    <receiver android:exported="false" android:name="org.thoughtcrime.securesms.service.RegistrationNotifier">
+        <intent-filter>
+            <action android:name="org.thoughtcrime.securesms.REGISTRATION_EVENT"/>
+        </intent-filter>
+    </receiver>
+
+    <receiver android:name="org.thoughtcrime.securesms.service.DirectoryRefreshListener">
+        <intent-filter>
+            <action android:name="org.whispersystems.whisperpush.DIRECTORY_REFRESH"/>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        </intent-filter>
+    </receiver>
+
+       <uses-library android:name="android.test.runner"/>
+</application>
+
+<instrumentation android:label="Tests for My App" android:name="android.test.InstrumentationTestRunner" android:targetPackage="org.thoughtcrime.securesms.tests"/>
+
+</manifest>
