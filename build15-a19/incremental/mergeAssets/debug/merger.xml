@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="OrgWhispersystemsTextsecureLibrary01.aar" >
+        <source path="/home/travis/build/AlexanderS/TextSecure/build/exploded-bundles/OrgWhispersystemsTextsecureLibrary01.aar/assets" />
+    </dataSet>
+    <dataSet config="ComActionbarsherlockActionbarsherlock440.aar" >
+        <source path="/home/travis/build/AlexanderS/TextSecure/build/exploded-bundles/ComActionbarsherlockActionbarsherlock440.aar/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/home/travis/build/AlexanderS/TextSecure/assets" >
+            <file
+                name="emoji/1f64b.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f64b.png" />
+            <file
+                name="emoji/1f639.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f639.png" />
+            <file
+                name="emoji/1f64c.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f64c.png" />
+            <file
+                name="emoji/1f612.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f612.png" />
+            <file
+                name="emoji/1f620.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f620.png" />
+            <file
+                name="emoji/1f624.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f624.png" />
+            <file
+                name="emoji/1f605.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f605.png" />
+            <file
+                name="emoji/1f63f.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f63f.png" />
+            <file
+                name="emoji/1f614.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f614.png" />
+            <file
+                name="emoji/1f637.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f637.png" />
+            <file
+                name="emoji/1f63b.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f63b.png" />
+            <file
+                name="emoji/1f606.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f606.png" />
+            <file
+                name="emoji/1f630.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f630.png" />
+            <file
+                name="emoji/1f60f.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f60f.png" />
+            <file
+                name="emoji/1f649.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f649.png" />
+            <file
+                name="emoji/1f632.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f632.png" />
+            <file
+                name="emoji/1f64a.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f64a.png" />
+            <file
+                name="emoji/1f621.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f621.png" />
+            <file
+                name="emoji/1f633.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f633.png" />
+            <file
+                name="emoji/1f602.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f602.png" />
+            <file
+                name="emoji/1f648.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f648.png" />
+            <file
+                name="emoji/1f63a.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f63a.png" />
+            <file
+                name="emoji/1f647.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f647.png" />
+            <file
+                name="emoji/1f60b.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f60b.png" />
+            <file
+                name="emoji/1f604.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f604.png" />
+            <file
+                name="emoji/1f616.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f616.png" />
+            <file
+                name="emoji/1f625.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f625.png" />
+            <file
+                name="emoji/1f63d.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f63d.png" />
+            <file
+                name="emoji/1f609.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f609.png" />
+            <file
+                name="emoji/1f601.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f601.png" />
+            <file
+                name="emoji/1f635.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f635.png" />
+            <file
+                name="emoji/1f60a.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f60a.png" />
+            <file
+                name="emoji/1f646.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f646.png" />
+            <file
+                name="emoji/1f61e.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f61e.png" />
+            <file
+                name="emoji/1f62b.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f62b.png" />
+            <file
+                name="emoji/1f631.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f631.png" />
+            <file
+                name="emoji/1f64f.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f64f.png" />
+            <file
+                name="emoji/1f629.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f629.png" />
+            <file
+                name="emoji/1f60d.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f60d.png" />
+            <file
+                name="emoji/1f64e.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f64e.png" />
+            <file
+                name="emoji/1f638.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f638.png" />
+            <file
+                name="emoji/1f61c.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f61c.png" />
+            <file
+                name="emoji/1f618.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f618.png" />
+            <file
+                name="emoji/1f603.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f603.png" />
+            <file
+                name="emoji/1f64d.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f64d.png" />
+            <file
+                name="emoji/1f62a.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f62a.png" />
+            <file
+                name="emoji/1f63e.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f63e.png" />
+            <file
+                name="emoji/1f61d.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f61d.png" />
+            <file
+                name="emoji/1f622.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f622.png" />
+            <file
+                name="emoji/1f60c.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f60c.png" />
+            <file
+                name="emoji/1f62d.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f62d.png" />
+            <file
+                name="emoji/1f628.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f628.png" />
+            <file
+                name="emoji/1f61a.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f61a.png" />
+            <file
+                name="emoji/1f623.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f623.png" />
+            <file
+                name="emoji/1f645.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f645.png" />
+            <file
+                name="emoji/1f63c.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f63c.png" />
+            <file
+                name="emoji/1f613.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f613.png" />
+            <file
+                name="emoji/1f640.png"
+                path="/home/travis/build/AlexanderS/TextSecure/assets/emoji/1f640.png" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/travis/build/AlexanderS/TextSecure/src/debug/assets" />
+    </dataSet>
+
+</merger>
